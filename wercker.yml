@@ -6,12 +6,12 @@ build:
         - script:
             name: Install packer
             code: |
-                export PACKER_VERSION=0.5.1
+                export PACKER_VERSION=0.7.5
                 mkdir -p $HOME/packer
                 cd $HOME/packer
-                wget https://dl.bintray.com/mitchellh/packer/${PACKER_VERSION}_linux_amd64.zip
-                unzip ${PACKER_VERSION}_linux_amd64.zip
-                rm ${PACKER_VERSION}_linux_amd64.zip
+                wget https://dl.bintray.com/mitchellh/packer/packer_${PACKER_VERSION}_linux_amd64.zip
+                unzip packer_${PACKER_VERSION}_linux_amd64.zip
+                rm packer_${PACKER_VERSION}_linux_amd64.zip
                 export PATH="$HOME/packer:$PATH"
         - script:
             name: Validate docker.json
